@@ -14,6 +14,8 @@ export default function useArticles() {
 
     useEffect(() => {getArticles()}, []);
 
+   
+
     const repository = {
         list() {
             return articles;
@@ -24,8 +26,9 @@ export default function useArticles() {
         },
 
         isValidId(id) {
-            returnid >= 0 && id < articles.length;
+            return id >= 0 && id < articles.length;
         },
+
 
         byId(id) {
             if (this.isValidId(id)) {

@@ -46,9 +46,15 @@ function App() {
       <br />
       <div className={'controls'}>
         <span className={'bold'}>Controls:</span><br />
-        <button onClick={false}>Add</button>
+        <button onClick={() => articles.add(formObject.title, formObject.content)}>Add</button>
         <button onClick={false} disabled={false} >  Delete</button>
         <br />
+        <input type={'text'} name={'title'}
+          placeholder={'title'} value={formObject.title}
+          onChange={(e) => changeHandler(e)}
+        /><br />
+        <button onClick={false} disabled={!
+      articles.isValidId(selectedArticleId)}>Delete</button>
       </div>
 
 
